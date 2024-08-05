@@ -1,5 +1,6 @@
 const slotModel = require("../models/slotModel");
 const userModel = require("../models/userModel");
+const dotenv = require("dotenv");
 
 // CREATE SLOT
 const createSlotController = async (req, res) => {
@@ -46,11 +47,29 @@ const getSlotController = async (req, res) => {
       });
     }
 
-    //check if userId matches or not
-    if (userId !== req.user._id.toString()) {
-      return res.status(400).send({
-        success: false,
-        message: "Invalid userId provided",
+    const adminUserId = req.user._id.toString();
+
+    // Check if the user is an admin
+    if (adminUserId === process.env.ADMIN_USER_ID) {
+      console.log("Accessing all slots from admin");
+      // If the user is an admin, fetch all slots with the specified status
+      const slots = await slotModel.find({ status }).sort({ createdAt: -1 });
+      return res.status(200).send({
+        success: true,
+        message: "Get all slots successfully",
+        slots,
+      });
+    }
+
+    // Check if the user is an admin
+    if (req.user._id.toString() === process.env.ADMIN_USER_ID) {
+      console.log("accessing all slots from admin ");
+      // If the user is an admin, fetch all slots
+      const slots = await slotModel.find().sort({ createdAt: -1 });
+      return res.status(200).send({
+        success: true,
+        message: "Get all slots successfully",
+        slots,
       });
     }
 
