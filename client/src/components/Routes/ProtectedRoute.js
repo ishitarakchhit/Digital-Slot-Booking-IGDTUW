@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import API from "../../services/API";
 import { getCurrentUser } from "../../redux/features/auth/authActions";
 import { Navigate } from "react-router-dom";
+
 const ProtectedRoute = ({ children }) => {
   const dispatch = useDispatch();
 
@@ -26,7 +27,7 @@ const ProtectedRoute = ({ children }) => {
   if (localStorage.getItem("token")) {
     return children;
   } else {
-    return <Navigate to="/studentlogin" />;
+    return <Navigate to="/" />;
   }
 };
 
