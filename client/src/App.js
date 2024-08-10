@@ -9,6 +9,7 @@ import ProtectedRoute from "./components/Routes/ProtectedRoute.js";
 import PublicRoute from "./components/Routes/PublicRoute.js";
 import Venue from "./pages/Venue.js";
 import UserDashboard from "./pages/UserDashboard.js";
+import AdminDashboard from "./pages/AdminDashboard.js";
 
 function App() {
   return (
@@ -36,6 +37,14 @@ function App() {
           element={
             <ProtectedRoute>
               <UserDashboard />
+            </ProtectedRoute>
+          }
+        ></Route>
+        <Route
+          path="/admindashboard"
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
             </ProtectedRoute>
           }
         ></Route>

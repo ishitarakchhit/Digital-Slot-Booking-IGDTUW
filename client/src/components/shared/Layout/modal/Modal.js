@@ -17,6 +17,7 @@ const Modal = ({ venueName }) => {
   const [equipments, setEquipments] = useState([]);
   const [status] = useState("pending");
 
+  console.log("User State:", user);
   const handleEquipmentChange = (e) => {
     const { value, checked } = e.target;
     if (checked) {
@@ -71,7 +72,8 @@ const Modal = ({ venueName }) => {
 
       if (data?.success) {
         toast.success("New Slot Created");
-        window.location.reload();
+        //navigate to /venue
+        window.location.href = "/userdashboard";
       } else {
         toast.error(data?.message || "Slot creation failed");
       }

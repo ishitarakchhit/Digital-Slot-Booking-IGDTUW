@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/*=============LANDING PAGE=================*/
+/* .landing-page {
+  background-image: url("/Landing_bg.png");
+} */
+
 /*========= FORM BANNER ==========*/
 .form-banner img {
   width: 100%;
@@ -56,4 +62,49 @@
 .navbar-brand {
   background-color: white !important;
   color: black !important;
+}
+
+/* ================Slot Count box==========================*/
+.status-table-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Adjust the gap between the box and table */
+}
+
+.box {
+  align-items: center;
+  flex: 1; /* Takes up available space */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  height: fit-content;
+  width: fit-content;
+}
+
+.table-container {
+  flex: 3; /* Takes up more space */
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table th {
+  background-color: #f4f4f4;
+  text-align: left;
 }

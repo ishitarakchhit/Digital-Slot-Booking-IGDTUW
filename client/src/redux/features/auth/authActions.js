@@ -38,7 +38,7 @@ export const userRegister = createAsyncThunk(
       });
       if (data?.success) {
         //alert("User Registerd Successfully");
-        window.location.replace("/login");
+        window.location.replace("/studentlogin");
         toast.success("User Registerd Successfully");
       }
     } catch (error) {

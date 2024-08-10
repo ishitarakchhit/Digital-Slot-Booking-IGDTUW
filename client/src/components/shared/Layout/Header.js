@@ -13,7 +13,7 @@ const Header = () => {
   const handleLogout = () => {
     localStorage.clear();
     toast.success("Logged Out Successfully");
-    navigate("/studentlogin");
+    navigate("/");
   };
 
   const toggleDropdown = () => {
@@ -30,7 +30,7 @@ const Header = () => {
           <ul className="navbar-nav flex-row">
             <li className="nav-item mx-3">
               <p className="nav-link">
-                Welcome {user?.name ? user.name : "Guest"}!
+                Welcome {user?.name ? user.name : "Admin"}!
               </p>
             </li>
             <li className="nav-item mx-3 position-relative">

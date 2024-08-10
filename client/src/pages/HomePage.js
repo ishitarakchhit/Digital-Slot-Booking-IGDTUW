@@ -14,15 +14,17 @@ export const HomePage = () => {
         <Spinner />
       ) : (
         <>
-          <h1>Login As: </h1>
-          <div className="d-flex mx-5 ">
-            <span className="btn btn-dark text-light text-decoration-none ">
-              {" "}
-              <Link to="/adminlogin">Admin</Link>
-            </span>
-            <span className="btn btn-dark text-light text-decoration-none">
-              <Link to="/studentlogin">Student</Link>
-            </span>
+          <div className="landing-page">
+            <h1>Login As: </h1>
+            <div className="d-flex mx-5 ">
+              <span className="btn btn-dark text-light text-decoration-none ">
+                {" "}
+                <Link to="/adminlogin">Admin</Link>
+              </span>
+              <span className="btn btn-dark text-light text-decoration-none">
+                <Link to="/studentlogin">Student</Link>
+              </span>
+            </div>
           </div>
         </>
       )}
