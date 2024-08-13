@@ -10,6 +10,8 @@ import PublicRoute from "./components/Routes/PublicRoute.js";
 import Venue from "./pages/Venue.js";
 import UserDashboard from "./pages/UserDashboard.js";
 import AdminDashboard from "./pages/AdminDashboard.js";
+import Team from "./pages/Team.js";
+import About from "./pages/About.js";
 
 function App() {
   return (
@@ -21,6 +23,22 @@ function App() {
           element={
             <PublicRoute>
               <HomePage />
+            </PublicRoute>
+          }
+        ></Route>
+        <Route
+          path="/team"
+          element={
+            <PublicRoute>
+              <Team />
+            </PublicRoute>
+          }
+        ></Route>
+        <Route
+          path="/about"
+          element={
+            <PublicRoute>
+              <About />
             </PublicRoute>
           }
         ></Route>

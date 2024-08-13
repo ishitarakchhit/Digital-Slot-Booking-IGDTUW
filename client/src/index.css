@@ -1,13 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.gradient-background {
+  background: linear-gradient(to right, #c9b2f6 0%, #915fd1 55%, #6109d9 100%);
+}
+
+.celestial-color {
+  background-color: #24014e;
 }
 
 /*=============LANDING PAGE=================*/
-/* .landing-page {
-  background-image: url("/Landing_bg.png");
-} */
+.homepage {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.homepage h1 {
+  font-weight: 900;
+}
+
+.homepage img {
+  height: 100vh;
+}
+
+.landing-message {
+  margin-top: 27vh;
+  margin-left: 8vh;
+  width: 40%;
+}
+
+.homepage span {
+  background-color: #24014e;
+  padding: 0.5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.linkButtons span:hover {
+  background-color: #41295e;
+}
+
+/*=====================LANDING PAGE NAVBAR===================*/
+.smallnavbar {
+  left: 20px;
+  border-radius: 20px;
+  height: 60px;
+  padding-left: 100px;
+  text-decoration: none;
+}
+.smallnavbar .active {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #24014e;
+  border-radius: 20px;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #24014e !important;
+}
+.navbar .active a {
+  color: white !important;
+  text-decoration: none;
+}
 
 /*========= FORM BANNER ==========*/
 .form-banner img {
@@ -20,6 +88,14 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+}
+
+.form-inside-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.167); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply blur effect to the background */
+  border-radius: 20px; /* Optional: rounded corners */
+  padding: 70px;
 }
 /*
 ============= loader===========
@@ -55,7 +131,7 @@
 
 /*=============================navbar=======================================*/
 .navbar {
-  background-color: white !important;
+  background-color: white;
   color: black !important;
 }
 .nav-link,

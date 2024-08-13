@@ -13,19 +13,29 @@ export const AdminLogin = () => {
       {loading ? (
         <Spinner />
       ) : (
-        <div className="row g-0">
-          <div className="col-md-8 form-banner">
-            {/* <img src="./assets/images/banner1.jpg" alt="LoginImage" /> */}
-          </div>
-          <div className="col-md-4 form-container">
-            <Form
-              formTitle={"Hello Admin!"}
-              submitButton={"LOGIN"}
-              formType={"adminlogin"}
-            />
-            <div>
-              Are you a student?
-              <Link to="/StudentLogin">Login Here!</Link>
+        <div className="w-100">
+          <div className="row g-0">
+            <div className="col-md-6 form-banner d-flex flex-column align-items-center justify-content-center">
+              <div>Are you a Student?</div>
+              <div className="mt-3">
+                {" "}
+                {/* Add margin-top to create some space between the text and button */}
+                <Link
+                  className="btn btn-primary celestial-color text-white px-5"
+                  to="/studentlogin"
+                >
+                  Login Here!
+                </Link>
+              </div>
+            </div>
+            <div className="col-md-6 form-container gradient-background">
+              <div className="form-inside-container">
+                <Form
+                  formTitle={"Hello Admin!"}
+                  submitButton={"LOGIN"}
+                  formType={"adminlogin"}
+                />
+              </div>
             </div>
           </div>
         </div>

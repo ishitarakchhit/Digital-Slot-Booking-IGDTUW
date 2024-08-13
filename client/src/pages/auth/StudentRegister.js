@@ -13,19 +13,29 @@ export const StudentRegister = () => {
       {loading ? (
         <Spinner />
       ) : (
-        <div className="row g-0">
-          <div className="col-md-8 form-banner">
-            <img src="./assets/images/banner2.jpg" alt="RegisterImage" />
-          </div>
-          <div className="col-md-4 form-container">
-            <Form
-              formTitle={"Register Here!"}
-              submitButton={"SIGN UP"}
-              formType={"register"}
-            />
-            <div>
-              Are you an Admin?
-              <Link to="/AdminLogin">Login Here!</Link>
+        <div className="w-100">
+          <div className="row g-0">
+            <div className="col-md-6 form-banner d-flex flex-column align-items-center justify-content-center">
+              <div>Are you an Admin?</div>
+              <div className="mt-3">
+                {" "}
+                {/* Add margin-top to create some space between the text and button */}
+                <Link
+                  className="btn btn-primary celestial-color text-white px-5"
+                  to="/AdminLogin"
+                >
+                  Login Here!
+                </Link>
+              </div>
+            </div>
+            <div className="col-md-6 form-container gradient-background">
+              <div className="form-inside-container">
+                <Form
+                  formTitle={"Register Here!!"}
+                  submitButton={"Sign UP"}
+                  formType={"register"}
+                />
+              </div>
             </div>
           </div>
         </div>

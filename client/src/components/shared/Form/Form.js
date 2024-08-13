@@ -16,7 +16,7 @@ const Form = ({ formType, submitButton, formTitle }) => {
     }
   }, [formType]);
   return (
-    <div>
+    <div className="d-flex justify-content-center align-items-center">
       <form
         onSubmit={(e) => {
           if (formType === "login" || formType === "adminlogin")
@@ -25,7 +25,7 @@ const Form = ({ formType, submitButton, formTitle }) => {
             return handleRegister(e, name, role, email, password);
         }}
       >
-        <h1 className="text-center">{formTitle}</h1>
+        <h3 className="text-center">{formTitle}</h3>
         <hr />
 
         {/* switch statement */}
@@ -110,22 +110,43 @@ const Form = ({ formType, submitButton, formTitle }) => {
           }
         })()}
 
-        <div className="d-flex flex-row justify-content-between">
-          {role === "student" &&
-            (formType === "login" ? (
-              <p>
-                Not registerd yet ? Register
-                <Link to="/studentregister"> Here !</Link>
-              </p>
-            ) : (
-              <p>
-                ALready User Please
-                <Link to="/studentlogin"> Login !</Link>
-              </p>
-            ))}
-          <button className="btn btn-primary" type="submit">
+        <div className="justify-content-between">
+          <button
+            className="btn btn-primary celestial-color px-5"
+            type="submit"
+          >
             {submitButton}
           </button>
+          {role === "student" &&
+            (formType === "login" ? (
+              <div className="">
+                <p className="ml-5">
+                  <hr />
+                  Register Now!
+                </p>
+                <Link
+                  className="btn btn-primary celestial-color text-white px-5"
+                  to="/studentregister"
+                >
+                  {" "}
+                  Sign Up!
+                </Link>
+              </div>
+            ) : (
+              <div className="">
+                <p className="ml-5">
+                  <hr />
+                  Already a User?
+                </p>
+                <Link
+                  className="btn btn-primary celestial-color text-white px-5"
+                  to="/studentlogin"
+                >
+                  {" "}
+                  Login
+                </Link>
+              </div>
+            ))}
         </div>
       </form>
     </div>

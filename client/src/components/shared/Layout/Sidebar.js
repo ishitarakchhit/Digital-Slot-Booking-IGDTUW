@@ -8,7 +8,7 @@ const Sidebar = () => {
   return (
     <div>
       <div className="sidebar">
-        <div className="menu">
+        <div className="menu h-50">
           {userMenu.map((menu) => {
             const isActive = location.pathname === menu.path;
             return (
